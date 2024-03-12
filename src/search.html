@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Country Search</title>
+    <link rel="stylesheet" href="search.css">
+    <link rel="stylesheet" href="navbar.css">
+
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="firstpage.html">Intro</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="myplan.html">MyPlan</a></li>
+                <li><a href="search.html">Search</a></li>
+                <li><a href="flag.html">Flags</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <main>
+        <center><form id="search-form">
+            <label for="country">Enter Country:</label>
+            <input type="text" id="country" name="country" required>
+            <button type="submit">Search</button>
+        </form></center>
+
+        <div id="country-info"></div>
+    </main>
+    <script src="search.js"></script>
+</body>
+</html>

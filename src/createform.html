@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create user data</title>
+    <link rel="stylesheet" href="createform.css">
+    <link rel="stylesheet" href="navbar.css">
+
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="firstpage.html">Intro</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="myplan.html">MyPlan</a></li>
+                <li><a href="search.html">Search</a></li>
+                <li><a href="flag.html">Flags</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <form id="user-plan-form">
+
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required><br><br>
+
+            <label for="country">Country:</label>
+            <input type="text" id="country" name="country" required><br><br>
+            
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" required><br><br>
+            
+            <label for="duration">Duration:</label>
+            <input type="text" id="duration" name="duration" required><br><br>
+            
+            <label for="motive">Motive:</label>
+            <select id="motive" name="motive" required>
+                <option value="work">Work</option>
+                <option value="travel">Travel</option>
+            </select><br><br>
+            
+            <button type="submit">Submit</button>
+        </form>
+    </main>
+    <script src="createform.js" defer></script>
+</body>
+</html>

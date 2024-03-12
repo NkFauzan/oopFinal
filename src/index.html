@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Website</title>
+
+    <link rel="stylesheet" href="style.css">
+    
+
+</head>
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="firstpage.html">Intro</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="myplan.html">MyPlan</a></li>
+                <li><a href="search.html">Search</a></li>
+                <li><a href="flag.html">Flags</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="picture-section">
+        <img src="travel4.jpg" alt="Placeholder Image">
+    </section>
+
+    <p class="top-countries">Top 3 best countries in the world</p>
+
+    <section class="flexbox-section"    >
+        <a href="Switzerland.html" class="flex-item">
+            <img  alt="Image 1">
+            <span class="country-name">Switzerland</span>
+        </a>
+        <a href="canada.html" class="flex-item">
+            <img  alt="Image 2">
+            <span class="country-name">Canada</span>
+
+        </a>
+        <a href="sweeden.html" class="flex-item">
+            <img alt="Image 3">
+            <span class="country-name">Sweeden</span>
+        </a>
+    </section>
+
+    <p class="top-countries">Top 3 best vacation countries</p>
+
+    <section class="flexbox-section">
+        <a href="australia.html" class="flex-item">
+            <img alt="Image 4">
+            <span class="country-name">Australia</span>
+
+        </a>
+        <a href="japan.html" class="flex-item">
+            <img alt="Image 5">
+            <span class="country-name">Japan</span>
+
+        </a>
+        <a href="uk.html" class="flex-item">
+            <img alt="Image 6">
+            <span class="country-name">United Kingdom</span>
+
+        </a>
+    </section>  
+
+    <p class="top-countries">Top 3 hot countries in the world</p>
+
+    <section class="flexbox-section">
+        <a href="mali.html" class="flex-item">
+            <img alt="Image 7">
+            <span class="country-name">Mali</span>
+
+        </a>
+        <a href="bahrain.html" class="flex-item">
+            <img alt="Image 8">
+            <span class="country-name">Bahrain</span>
+
+        </a>
+        <a href="qatar.html" class="flex-item">
+            <img alt="Image 9">
+            <span class="country-name">Qatar</span>
+
+        </a>
+    </section>  
+
+    <script>
+        fetch('https://restcountries.com/v3.1/all')
+            .then(response => response.json())
+            .then(data => {
+                const flexItems = document.querySelectorAll('.flex-item img');
+                const switzerland = data.find(country => country.name.common === 'Switzerland');
+                const canada = data.find(country => country.name.common === 'Canada');
+                const sweden = data.find(country => country.name.common === 'Sweden');
+                const australia = data.find(country => country.name.common === 'Australia');
+                const japan = data.find(country => country.name.common === 'Japan');
+                const uk = data.find(country => country.name.common === 'United Kingdom');
+                const mali = data.find(country => country.name.common === 'Mali');
+                const bahrain = data.find(country => country.name.common === 'Bahrain');
+                const qatar = data.find(country => country.name.common === 'Qatar');
+
+                if (switzerland) {
+                    const switzerlandFlagUrl = switzerland.flags.png;
+                    flexItems[0].src = switzerlandFlagUrl;
+                    flexItems[0].alt = `Flag of Switzerland`;
+                } else {
+                    console.error('Switzerland data not found in the API response.');
+                }
+
+                if (canada) {
+                    const canadaFlagUrl = canada.flags.png;
+                    flexItems[1].src = canadaFlagUrl;
+                    flexItems[1].alt = `Flag of Canada`;
+                } else {
+                    console.error('Canada data not found in the API response.');
+                }
+
+                if (sweden) {
+                    const swedenFlagUrl = sweden.flags.png;
+                    flexItems[2].src = swedenFlagUrl;
+                    flexItems[2].alt = `Flag of Sweden`;
+                } else {
+                    console.error('Sweden data not found in the API response.');
+                }
+                if (australia) {
+                    const australiaFlagUrl = australia.flags.png;
+                    flexItems[3].src = australiaFlagUrl;
+                    flexItems[3].alt = `Flag of Australia`;
+                } else {
+                    console.error('Australia data not found in the API response.');
+                }
+
+                if (japan) {
+                    const japanFlagUrl = japan.flags.png;
+                    flexItems[4].src = japanFlagUrl;
+                    flexItems[4].alt = `Flag of Japan`;
+                } else {
+                    console.error('Japan data not found in the API response.');
+                }
+
+                if (uk) {
+                    const ukFlagUrl = uk.flags.png;
+                    flexItems[5].src = ukFlagUrl;
+                    flexItems[5].alt = `Flag of United Kingdom`;
+                } else {
+                    console.error('United Kingdom data not found in the API response.');
+                }
+                if (mali) {
+                    const maliFlagUrl = mali.flags.png;
+                    flexItems[6].src = maliFlagUrl;
+                    flexItems[6].alt = `Flag of Mali`;
+                } else {
+                    console.error('Mali data not found in the API response.');
+                }
+
+                if (bahrain) {
+                    const bahrainFlagUrl = bahrain.flags.png;
+                    flexItems[7].src = bahrainFlagUrl;
+                    flexItems[7].alt = `Flag of Bahrain`;
+                } else {
+                    console.error('Bahrain data not found in the API response.');
+                }
+
+                if (qatar) {
+                    const qatarFlagUrl = qatar.flags.png;
+                    flexItems[8].src = qatarFlagUrl;
+                    flexItems[8].alt = `Flag of Qatar`;
+                } else {
+                    console.error('Qatar data not found in the API response.');
+                }
+            })
+            .catch(error => {
+                console.error('Error fetching data:', error);
+            });
+    </script>
+</body>
+</html>

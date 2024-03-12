@@ -1,0 +1,60 @@
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 300vh; /* Minimum height to cover the viewport */
+    overflow-y: auto; /* Allow vertical scrolling */
+    background-color: #309acf;
+
+}
+
+
+main {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    border-radius: 15px;
+    
+
+}
+
+form {
+    margin-bottom: 50px;
+    border-radius: 15px;
+    
+
+}
+
+label {
+    margin-right: 10px;
+}
+
+button {
+    background-color: #33dc00;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 15px;
+
+}
+
+button:hover {
+    background-color: #1c7701;
+}
+
+#country-info {
+    border: 1px solid #ccc;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 15px;
+
+}
+
+.flag-image {
+    max-width: 200px; /* Adjust the maximum width as needed */
+    height: auto;
+}
+

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flag Page</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="navbar.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #418abf; /* Light gray background */
+        }
+
+        
+        #flag-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .flag-container {
+            margin: 10px;
+            padding: 10px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .flag-container img {
+            width: 100px; /* Adjust the flag image width as needed */
+            height: auto;
+            border-radius: 5px;
+        }
+        
+        .flag-name {
+            margin-top: 10px;
+            font-size: 16px;
+            text-align: center;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="firstpage.html">Intro</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="myplan.html">MyPlan</a></li>
+                <li><a href="search.html">Search</a></li>
+                <li><a href="flag.html">Flags</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="flag-container"></div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            fetchFlags();
+        });
+
+        async function fetchFlags() {
+            try {
+                const response = await fetch('https://restcountries.com/v3.1/all');
+                const data = await response.json();
+                displayFlags(data);
+            } catch (error) {
+                console.error('Error fetching flags:', error);
+            }
+        }
+
+        function displayFlags(flags) {
+            const flagContainer = document.getElementById('flag-container');
+
+            flags.forEach(flag => {
+                const flagDiv = document.createElement('div');
+                flagDiv.classList.add('flag-container');
+
+                const img = document.createElement('img');
+                img.src = flag.flags.png;
+                img.alt = `Flag of ${flag.name.common}`;
+                flagDiv.appendChild(img);
+
+                const flagName = document.createElement('p');
+                flagName.textContent = flag.name.common;
+                flagName.classList.add('flag-name');
+                flagDiv.appendChild(flagName);
+
+                flagContainer.appendChild(flagDiv);
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,128 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 300vh; /* Minimum height to cover the viewport */
+    overflow-y: auto; /* Allow vertical scrolling */
+    background-color: #309acf;
+
+}
+
+header {
+    background-color: #000000;
+    color: #fff;
+    padding: 20px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+main {
+    padding: 20px;
+}
+
+#user-plan-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #c2f1ff;
+
+
+}
+
+#user-plan-table th, #user-plan-table td {
+    border: 2px solid #1b1b1b;
+    padding: 8px;
+    text-align: center;
+    
+}
+
+#user-plan-table th {
+    background-color: #ffffff;
+}
+
+#user-plan-table tbody tr:hover {
+    background-color: #52c9e0;
+}
+
+#goto-other-page {
+    background-color: #00b04f; /* Change to your desired background color */
+    color: #fff; /* Text color */
+    border: 2px solid #008c3c; /* Border color */
+    border-radius: 8px; /* Border radius */
+    padding: 10px 20px; /* Padding */
+    font-size: 16px; /* Font size */
+    cursor: pointer; /* Cursor style */
+    transition: background-color 0.3s, border-color 0.3s, color 0.3s; /* Smooth transition */
+}
+
+#goto-other-page:hover {
+    background-color: #00d05a; /* Change to your desired hover background color */
+    border-color: #00ff66; /* Change to your desired hover border color */
+}
+
+h2 {
+    color: #ffffff; /* Text color */
+    font-weight: bold; /* Bold font */
+    margin-left:25px;
+    font-size: 30px;
+}
+
+
+
+/* Edit button */
+.edit-button {
+    background-color: #007bff; /* Button background color */
+    color: #fff; /* Button text color */
+    border: none; /* Remove button border */
+    padding: 8px 16px; /* Adjust padding */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Cursor style */
+    transition: background-color 0.3s; /* Smooth transition for background color */
+}
+
+.edit-button:hover {
+    background-color: #0056b3; /* Button background color on hover */
+}
+
+/* Delete button */
+.delete-button {
+    background-color: #dc3545; /* Button background color */
+    color: #fff; /* Button text color */
+    border: none; /* Remove button border */
+    padding: 8px 16px; /* Adjust padding */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Cursor style */
+    transition: background-color 0.3s; /* Smooth transition for background color */
+}
+
+.delete-button:hover {
+    background-color: #c82333; /* Button background color on hover */
+}
+
+/* Detail button */
+.detail-button {
+    background-color: #28a745; /* Button background color */
+    color: #fff; /* Button text color */
+    border: none; /* Remove button border */
+    padding: 8px 16px; /* Adjust padding */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Cursor style */
+    transition: background-color 0.3s; /* Smooth transition for background color */
+}
+
+.detail-button:hover {
+    background-color: #218838; /* Button background color on hover */
+}
